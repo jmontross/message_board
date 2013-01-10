@@ -1,4 +1,11 @@
 MessageBoard::Application.routes.draw do
+  resources :posts
+
+
+  resources :boards
+
+  root :to => 'posts'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
