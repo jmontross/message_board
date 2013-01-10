@@ -1,17 +1,15 @@
 <%- model_class = Post -%>
 <div class="page-header">
-  <h1><%=t '.title', "Viral Message Board"%></h1>
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @post.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @post.title %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @post.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:message) %>:</strong></dt>
   <dd><%= @post.message %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:board_id_id) %>:</strong></dt>
-  <dd><%= @post.board_id_id %></dd>
 </dl>
 
 <div class="form-actions">

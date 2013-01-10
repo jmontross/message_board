@@ -6,10 +6,9 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:message) %></th>
-      <th><%= model_class.human_attribute_name(:board_id_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,10 +17,9 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= link_to post.id, post_path(post) %></td>
-        <td><%= post.name %></td>
         <td><%= post.title %></td>
+        <td><%= post.name %></td>
         <td><%= post.message %></td>
-        <td><%= post.board_id_id %></td>
         <td><%=l post.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
