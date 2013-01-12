@@ -1,29 +1,26 @@
 <%- model_class = Post -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+  <h1><%=t '.title', :default => "Viralheat Message Board" %></h1>
 </div>
 <table class="table table-striped">
   <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:message) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    <tr style="background-color:black">
+      <th><%= link_to image_tag('/assets/post.png'),  url_for({:controller => :posts, :action => :new}) %>
+      </th>
+      <th colspan="5"></th>
     </tr>
   </thead>
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= link_to post.id, post_path(post) %></td>
-        <td><%= post.title %></td>
-        <td><%= post.name %></td>
-        <td><%= post.message %></td>
-        <td><%=l post.created_at %></td>
+        <td><%= link_to image_tag('/assets/pen.png'), url_for({:controller => :posts, :action => :edit,:id => post.id})
+             %>
+        </td>
+
+        <td colspan="4"><%= post.message_truncated %>
+          <br /> <%= post.created_at.strftime("Posted %B %d, %Y @ %k:%M %p") %> by <%= post.name %>
+       </td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_post_path(post), :class => 'btn btn-mini' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       post_path(post),
                       :method => :delete,
@@ -34,7 +31,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_post_path,
-            :class => 'btn btn-primary' %>
