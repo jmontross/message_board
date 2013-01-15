@@ -1,11 +1,11 @@
 <%- model_class = Post -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => "Viralheat Message Board" %></h1>
+  <h1><title><%= yield (:title) %></title> <%=t '.title', :default => "Viralheat Message Board" %></h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr style="background-color:black">
-      <th><%= link_to image_tag('/assets/post.png'),  url_for({:controller => :posts, :action => :new}) %>
+      <th><%= link_to  image_tag('/assets/post.png'),  url_for({:controller => :posts, :action => :new}), :remote => true, :class => "post_new"%>
       </th>
       <th colspan="5"></th>
     </tr>

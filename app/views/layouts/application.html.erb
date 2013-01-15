@@ -49,9 +49,10 @@
             </ul>
           </div> --><!--/.well -->
         </div><!--/span-->
-        <div class="span9">
-          <%= bootstrap_flash %>
+        <div data-pjax-container class="span9">
           <%= yield %>
+          <%= bootstrap_flash %>
+
         </div>
       </div><!--/row-->
 

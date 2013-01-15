@@ -9,8 +9,17 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# module Store
+#   class Application < Rails::Application
+#     config.middleware.use Rack::Pjax
+#     # Other config commands omitted
+#   end
+# end
+
 module MessageBoard
   class Application < Rails::Application
+
+     config.middleware.use Rack::Pjax
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
