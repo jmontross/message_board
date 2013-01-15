@@ -1,14 +1,18 @@
 ---
+die.png: die-32c93ee8649c1cfbc5b3c7577aead905.png
+die/index.png: die-32c93ee8649c1cfbc5b3c7577aead905.png
+message_board_sprite.png: message_board_sprite-a3df67bdf11e47ed8c72d421e645e241.png
+message_board_sprite/index.png: message_board_sprite-a3df67bdf11e47ed8c72d421e645e241.png
 pen.png: pen-3e4fc46ead1b42d6a2f929e75d326569.png
 pen/index.png: pen-3e4fc46ead1b42d6a2f929e75d326569.png
 post.png: post-e5e06c155bf81da90b0625b8ae9426be.png
 post/index.png: post-e5e06c155bf81da90b0625b8ae9426be.png
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-a779dece9a6c0bf954c55fcae591a851.js
-application/index.js: application-a779dece9a6c0bf954c55fcae591a851.js
-application.css: application-4cb029e85ad0986973fd802e15e2afbc.css
-application/index.css: application-4cb029e85ad0986973fd802e15e2afbc.css
+application.js: application-39dfce463d0defce1b6a3b8aabcea5ae.js
+application/index.js: application-39dfce463d0defce1b6a3b8aabcea5ae.js
+application.css: application-9d2196c96114a395a73535c3a9c32931.css
+application/index.css: application-9d2196c96114a395a73535c3a9c32931.css
 fontawesome-webfont.eot: fontawesome-webfont-d1a87f253d164f9455111cf8108b946d.eot
 fontawesome-webfont/index.eot: fontawesome-webfont-d1a87f253d164f9455111cf8108b946d.eot
 fontawesome-webfont.svg: fontawesome-webfont-c3f3594758768fbb43eae746d18b3b50.svg
